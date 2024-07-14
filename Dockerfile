@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 8001
+EXPOSE 443
 
-CMD ["python3", "-m", "http.server", "8001"]
+CMD ["python3", "-m", "http.server", "443"]
