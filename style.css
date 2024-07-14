@@ -100,7 +100,7 @@ a {
 
 .header .logo i {
     color: var(--primary);
-    padding-right: .5rem;
+    /* padding-right: .5rem; */
 }
 
 .header .navbar {
@@ -648,6 +648,7 @@ a {
     }
 
     .home .content {
+        padding-top: 6rem;
         max-width: 50rem;
         padding-left: 3rem;
     }
