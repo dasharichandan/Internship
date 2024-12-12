@@ -736,3 +736,78 @@ a {
     color: #ff4500;
 }
 
+/*extra*/
+/* Base styles */
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.mode-toggle {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%; /* Makes it round */
+    background-color: transparent;
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Light mode button appearance */
+.mode-toggle {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Dark mode button appearance */
+.mode-toggle.dark-mode {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+/* Sun and moon animations */
+.mode-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: #ffd700; /* Sun color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Dark mode sun to moon animation */
+.mode-toggle.dark-mode::before {
+    background-color: #f0f0f0; /* Moon color */
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Mode transition effect */
+.mode-toggle:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e4e4e4;
+}
+
+.header.dark-mode {
+    background-color: #1e1e1e;
+}
